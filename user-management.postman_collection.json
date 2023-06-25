@@ -1,0 +1,187 @@
+{
+	"info": {
+		"_postman_id": "f4549dc3-05d8-4991-a80f-8478a26de589",
+		"name": "user-management",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26129877"
+	},
+	"item": [
+		{
+			"name": "Add User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"username\": \"aaron.schmitz\",\n  \"firstName\": \"Aaron\",\n  \"lastName\": \"Schmitz\",\n  \"email\": \"arron.schmitz@gmail.com\",\n  \"address\": {\n    \"street\": \"Leipziger str. 11\",\n    \"city\": \"Cologne\",\n    \"province\": \"NRW\",\n    \"postalCode\": \"50858\",\n    \"countryCode\": \"DE\"\n  }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/user-management/user",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"user-management",
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Activate User",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/user-management/user/active?username=hr.khayatzadeh",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"user-management",
+						"user",
+						"active"
+					],
+					"query": [
+						{
+							"key": "username",
+							"value": "hr.khayatzadeh"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get User by Email Address",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/user-management/user/email/hr.khayatzadeh@gmail.com",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"user-management",
+						"user",
+						"email",
+						"hr.khayatzadeh@gmail.com"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get User by username",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/user-management/user/username/hr.khayatzadeh",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"user-management",
+						"user",
+						"username",
+						"hr.khayatzadeh"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Fetch all users",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/user-management/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"user-management",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Fetch all active usres",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/user-management/users/active",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"user-management",
+						"users",
+						"active"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Search users",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/user-management/users/search/schmi",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"user-management",
+						"users",
+						"search",
+						"schmi"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
